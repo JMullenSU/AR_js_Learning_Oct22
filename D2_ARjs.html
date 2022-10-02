@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+<script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+<script>THREEx.ArToolkitContext.baseURL = 'https://rawgit.com/jeroeetienne/ar.js/master/three.js/'</script>
+<script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+
+<body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs renderer="antialias: true; logarithmicDepthBuffer: true; sortObjects: true;">
+
+        <a-nft
+            type="nft"
+            url="https://jmullensu.github.io/AR_js_Learning_Oct22/Donut_Tutorial_Image.fset"
+            smooth="true"
+            smoothCount="10"
+            smoothTolerance=".01"
+            smoothThreshold="5">
+
+            <a-entity
+                gltf-model="https://jmullensu.github.io/AR_js_Learning_Oct22/D1_Donut_Tutorial_3_0.gltf" 
+                animation-mixer
+                scale="8.0 8.0 8.0"
+                position="0 1 0"
+                rotation="0 180 0"
+            ></a-entity>
+
+        </a-nft>
+
+        <a-entity camera></a-entity>
+
+    </a-scene>
+</body>
+
+</html>
