@@ -18,14 +18,19 @@
             
             <a-assets>
                 <img id="donutRender" src="https://jmullensu.github.io/AR_js_Learning_Oct22/D3_Assets/D3_Tutorial_Image.jpg" />
-                <a-asset-item id="donut" src="https://jmullensu.github.io/AR_js_Learning_Oct22/D1_Donut_Tutorial_3_0.gltf" animation-mixer></a-asset-item>
+                <a-asset-item id="donut" src="https://jmullensu.github.io/AR_js_Learning_Oct22/D1_Donut_Tutorial_3_0.gltf"></a-asset-item>
             </a-assets>
       
             <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
       
             <a-entity mindar-image-target="targetIndex: 0">
                 <a-plane src="#donutRender" position="0 0 0" height="1" width="1" rotation="0 0 0"></a-plane>
-                <a-gltf-model rotation="0 180 0 " position="0 0 0.5" scale="8.0 8.0 8.0" src="#donut">
+                <a-entity gltf-model="#donut" 
+                          animation-mixer
+                          rotation="0 180 0"
+                          position="0 0 0.5"
+                          scale="8.0 8.0 8.0">
+                </a-entity>
             </a-entity>
           </a-scene>
     </body>
