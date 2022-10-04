@@ -23,7 +23,8 @@
       
             <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
       
-            <a-entity mindar-image-target="targetIndex: 0" gltf-model="#donut" rotation="0 180 0" position="0 0 0.5" scale="100.0 100.0 100.0">
+            <a-entity mindar-image-target="targetIndex: 0">
+                <a-gltf-model rotation="0 180 0 " position="0 0 0.5" scale="8.0 8.0 8.0" src="#donut" animation-mixer></a-gltf-model>
             </a-entity>
           </a-scene>
     </body>
